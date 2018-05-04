@@ -1,0 +1,60 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "template",
+            "otherEntityName": "template",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "ui",
+            "otherEntityName": "tUi",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "tVersion"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "backend",
+            "otherEntityName": "tBackend",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "tVersion"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "elements",
+            "otherEntityName": "element",
+            "otherEntityRelationshipName": "tVersion"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "parent",
+            "otherEntityName": "tVersion",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "version",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180504103926",
+    "entityTableName": "t_version",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "template"
+}
