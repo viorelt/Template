@@ -233,10 +233,12 @@ relationship OneToOne{
     TVersion{ui} to TUi
     TVersion{backend} to TBackend
     TUi{post} to SubmitAction
+    Template{lastVersion} to TVersion
 }
 relationship ManyToOne{
 	TVersion{parent} to TVersion
    	MyTemplate{staticTemplate} to TVersion
+    TVersion{template} to Template
     EValue{element} to Element
 }
 
