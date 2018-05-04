@@ -50,6 +50,9 @@ public class TVersion implements Serializable {
     @ManyToOne
     private TVersion parent;
 
+    @ManyToOne
+    private Template template;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -173,6 +176,19 @@ public class TVersion implements Serializable {
 
     public void setParent(TVersion tVersion) {
         this.parent = tVersion;
+    }
+
+    public Template getTemplate() {
+        return template;
+    }
+
+    public TVersion template(Template template) {
+        this.template = template;
+        return this;
+    }
+
+    public void setTemplate(Template template) {
+        this.template = template;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

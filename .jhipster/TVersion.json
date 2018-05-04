@@ -34,6 +34,12 @@
             "relationshipName": "parent",
             "otherEntityName": "tVersion",
             "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "template",
+            "otherEntityName": "template",
+            "otherEntityField": "id"
         }
     ],
     "fields": [

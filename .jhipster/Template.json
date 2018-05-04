@@ -2,6 +2,14 @@
     "fluentMethods": true,
     "relationships": [
         {
+            "relationshipType": "one-to-one",
+            "relationshipName": "lastVersion",
+            "otherEntityName": "tVersion",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "template"
+        },
+        {
             "relationshipType": "one-to-many",
             "relationshipName": "versions",
             "otherEntityName": "tVersion",

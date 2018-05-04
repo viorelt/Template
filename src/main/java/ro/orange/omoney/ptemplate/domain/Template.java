@@ -56,6 +56,10 @@ public class Template implements Serializable {
     @Column(name = "deleted")
     private Boolean deleted;
 
+    @OneToOne
+    @JoinColumn(unique = true)
+    private TVersion lastVersion;
+
     @OneToMany(mappedBy = "template")
     @JsonIgnore
     private Set<TVersion> versions = new HashSet<>();
@@ -119,6 +123,19 @@ public class Template implements Serializable {
 
     public void setDeleted(Boolean deleted) {
         this.deleted = deleted;
+    }
+
+    public TVersion getLastVersion() {
+        return lastVersion;
+    }
+
+    public Template lastVersion(TVersion tVersion) {
+        this.lastVersion = tVersion;
+        return this;
+    }
+
+    public void setLastVersion(TVersion tVersion) {
+        this.lastVersion = tVersion;
     }
 
     public Set<TVersion> getVersions() {
