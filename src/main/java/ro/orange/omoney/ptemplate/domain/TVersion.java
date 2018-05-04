@@ -1,6 +1,7 @@
 package ro.orange.omoney.ptemplate.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 
@@ -23,12 +24,24 @@ public class TVersion implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
+    /**
+     * The template version
+     */
+    @ApiModelProperty(value = "The template version")
     @Column(name = "version")
     private Long version;
 
+    /**
+     * Who created the version
+     */
+    @ApiModelProperty(value = "Who created the version")
     @Column(name = "created_by")
     private String createdBy;
 
+    /**
+     * When the version was created
+     */
+    @ApiModelProperty(value = "When the version was created")
     @Column(name = "created_date")
     private String createdDate;
 

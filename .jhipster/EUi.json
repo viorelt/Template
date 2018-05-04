@@ -11,58 +11,58 @@
     "fields": [
         {
             "fieldName": "type",
-            "javadoc": "tipul elementului",
+            "javadoc": "The element type.",
             "fieldType": "EUiType",
             "fieldValues": "TEXT,NUMERIC,DATE,CHECKBOX,SELECTION,EMAIL,IBAN,PHONE"
         },
         {
             "fieldName": "index",
-            "javadoc": "ordinea elementului in pagina",
+            "javadoc": "The position of the element inside the view.",
             "fieldType": "Integer"
         },
         {
             "fieldName": "icon",
-            "javadoc": "path-ul relativ pentru elementul curent",
+            "javadoc": "The icon name assigned to the element.",
             "fieldType": "String"
         },
         {
             "fieldName": "labelKey",
-            "javadoc": "cheia labelului pentru elementul curent",
+            "javadoc": "The element's label key required for internationalization.",
             "fieldType": "String"
         },
         {
             "fieldName": "descriptionKey",
-            "javadoc": "cheia descrierii pentru elementul curent",
+            "javadoc": "The element's description key required for internationalization.",
             "fieldType": "String"
         },
         {
             "fieldName": "hintKey",
-            "javadoc": "cheia pentru sugestia aferenta elementului curent",
+            "javadoc": "The element's hint key required for internationalization.",
             "fieldType": "String"
         },
         {
             "fieldName": "readOnly",
-            "javadoc": "true daca elementul este readonly",
+            "javadoc": "True if the element is read-only.",
             "fieldType": "Boolean"
         },
         {
             "fieldName": "required",
-            "javadoc": "true daca elementul este obligatoriu de introdus",
+            "javadoc": "True if the element's completion is mandatory.",
             "fieldType": "Boolean"
         },
         {
             "fieldName": "visible",
-            "javadoc": "true daca elementul este vizibil",
+            "javadoc": "True if the element is visible.",
             "fieldType": "Boolean"
         },
         {
             "fieldName": "format",
-            "javadoc": "formatul necesar interfetei grafice, care va fi aplicat\npe valoarea venita din backend",
+            "javadoc": "The required format for the element.",
             "fieldType": "String"
         },
         {
             "fieldName": "validator",
-            "javadoc": "validatorul pentru elementul curent",
+            "javadoc": "The validator for the element.",
             "fieldType": "String"
         }
     ],

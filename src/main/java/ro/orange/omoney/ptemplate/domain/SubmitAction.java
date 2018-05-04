@@ -22,16 +22,16 @@ public class SubmitAction implements Serializable {
     private Long id;
 
     /**
-     * cheia pentru eticheta butonului prin care se face plata
+     * Internationalization key needed for the button's label.
      */
-    @ApiModelProperty(value = "cheia pentru eticheta butonului prin care se face plata")
+    @ApiModelProperty(value = "Internationalization key needed for the button's label.")
     @Column(name = "label_key")
     private String labelKey;
 
     /**
-     * endpointul la care se face plata
+     * The backend endpoint where the payment is sent to.
      */
-    @ApiModelProperty(value = "endpointul la care se face plata")
+    @ApiModelProperty(value = "The backend endpoint where the payment is sent to.")
     @Column(name = "endpoint")
     private String endpoint;
 

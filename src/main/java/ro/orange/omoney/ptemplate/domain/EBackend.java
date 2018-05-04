@@ -25,30 +25,30 @@ public class EBackend implements Serializable {
     private Long id;
 
     /**
-     * numele java aferent elementului curent
+     * The java name of the current element
      */
-    @ApiModelProperty(value = "numele java aferent elementului curent")
+    @ApiModelProperty(value = "The java name of the current element")
     @Column(name = "name")
     private String name;
 
     /**
-     * tipul java aferent elementului curent
+     * The java type of the current element
      */
-    @ApiModelProperty(value = "tipul java aferent elementului curent")
+    @ApiModelProperty(value = "The java type of the current element")
     @Column(name = "jhi_type")
     private String type;
 
     /**
-     * formatul java aferent elementului curent
+     * The java format of the current element value
      */
-    @ApiModelProperty(value = "formatul java aferent elementului curent")
+    @ApiModelProperty(value = "The java format of the current element value")
     @Column(name = "format")
     private String format;
 
     /**
-     * validatorul java aferent elementului curent
+     * The java validator of the current element
      */
-    @ApiModelProperty(value = "validatorul java aferent elementului curent")
+    @ApiModelProperty(value = "The java validator of the current element")
     @Column(name = "validator")
     private String validator;
 
