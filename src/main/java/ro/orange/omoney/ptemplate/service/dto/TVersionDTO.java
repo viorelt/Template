@@ -27,6 +27,8 @@ public class TVersionDTO implements Serializable {
 
     private Long parentId;
 
+    private Long templateId;
+
     public Long getId() {
         return id;
     }
@@ -89,6 +91,14 @@ public class TVersionDTO implements Serializable {
 
     public void setParentId(Long tVersionId) {
         this.parentId = tVersionId;
+    }
+
+    public Long getTemplateId() {
+        return templateId;
+    }
+
+    public void setTemplateId(Long templateId) {
+        this.templateId = templateId;
     }
 
     @Override

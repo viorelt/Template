@@ -8,10 +8,13 @@ import org.mapstruct.*;
 /**
  * Mapper for the entity Template and its DTO TemplateDTO.
  */
-@Mapper(componentModel = "spring", uses = {})
+@Mapper(componentModel = "spring", uses = {TVersionMapper.class})
 public interface TemplateMapper extends EntityMapper<TemplateDTO, Template> {
 
+    @Mapping(source = "lastVersion.id", target = "lastVersionId")
+    TemplateDTO toDto(Template template);
 
+    @Mapping(source = "lastVersionId", target = "lastVersion")
     @Mapping(target = "versions", ignore = true)
     Template toEntity(TemplateDTO templateDTO);
 

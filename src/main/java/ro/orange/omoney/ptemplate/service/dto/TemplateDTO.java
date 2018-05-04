@@ -22,6 +22,8 @@ public class TemplateDTO implements Serializable {
 
     private Boolean deleted;
 
+    private Long lastVersionId;
+
     public Long getId() {
         return id;
     }
@@ -60,6 +62,14 @@ public class TemplateDTO implements Serializable {
 
     public void setDeleted(Boolean deleted) {
         this.deleted = deleted;
+    }
+
+    public Long getLastVersionId() {
+        return lastVersionId;
+    }
+
+    public void setLastVersionId(Long tVersionId) {
+        this.lastVersionId = tVersionId;
     }
 
     @Override

@@ -32,5 +32,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="t_version"/>
 
+        <addForeignKeyConstraint baseColumnNames="template_id"
+                                 baseTableName="t_version"
+                                 constraintName="fk_tversion_template_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="template"/>
+
     </changeSet>
 </databaseChangeLog>
