@@ -29,81 +29,80 @@ public class EUi implements Serializable {
     private Long id;
 
     /**
-     * tipul elementului
+     * The element type.
      */
-    @ApiModelProperty(value = "tipul elementului")
+    @ApiModelProperty(value = "The element type.")
     @Enumerated(EnumType.STRING)
     @Column(name = "jhi_type")
     private EUiType type;
 
     /**
-     * ordinea elementului in pagina
+     * The position of the element inside the view.
      */
-    @ApiModelProperty(value = "ordinea elementului in pagina")
+    @ApiModelProperty(value = "The position of the element inside the view.")
     @Column(name = "jhi_index")
     private Integer index;
 
     /**
-     * path-ul relativ pentru elementul curent
+     * The icon name assigned to the element.
      */
-    @ApiModelProperty(value = "path-ul relativ pentru elementul curent")
+    @ApiModelProperty(value = "The icon name assigned to the element.")
     @Column(name = "icon")
     private String icon;
 
     /**
-     * cheia labelului pentru elementul curent
+     * The element's label key required for internationalization.
      */
-    @ApiModelProperty(value = "cheia labelului pentru elementul curent")
+    @ApiModelProperty(value = "The element's label key required for internationalization.")
     @Column(name = "label_key")
     private String labelKey;
 
     /**
-     * cheia descrierii pentru elementul curent
+     * The element's description key required for internationalization.
      */
-    @ApiModelProperty(value = "cheia descrierii pentru elementul curent")
+    @ApiModelProperty(value = "The element's description key required for internationalization.")
     @Column(name = "description_key")
     private String descriptionKey;
 
     /**
-     * cheia pentru sugestia aferenta elementului curent
+     * The element's hint key required for internationalization.
      */
-    @ApiModelProperty(value = "cheia pentru sugestia aferenta elementului curent")
+    @ApiModelProperty(value = "The element's hint key required for internationalization.")
     @Column(name = "hint_key")
     private String hintKey;
 
     /**
-     * true daca elementul este readonly
+     * True if the element is read-only.
      */
-    @ApiModelProperty(value = "true daca elementul este readonly")
+    @ApiModelProperty(value = "True if the element is read-only.")
     @Column(name = "read_only")
     private Boolean readOnly;
 
     /**
-     * true daca elementul este obligatoriu de introdus
+     * True if the element's completion is mandatory.
      */
-    @ApiModelProperty(value = "true daca elementul este obligatoriu de introdus")
+    @ApiModelProperty(value = "True if the element's completion is mandatory.")
     @Column(name = "required")
     private Boolean required;
 
     /**
-     * true daca elementul este vizibil
+     * True if the element is visible.
      */
-    @ApiModelProperty(value = "true daca elementul este vizibil")
+    @ApiModelProperty(value = "True if the element is visible.")
     @Column(name = "visible")
     private Boolean visible;
 
     /**
-     * formatul necesar interfetei grafice, care va fi aplicat
-     * pe valoarea venita din backend
+     * The required format for the element.
      */
-    @ApiModelProperty(value = "formatul necesar interfetei grafice, care va fi aplicat pe valoarea venita din backend")
+    @ApiModelProperty(value = "The required format for the element.")
     @Column(name = "format")
     private String format;
 
     /**
-     * validatorul pentru elementul curent
+     * The validator for the element.
      */
-    @ApiModelProperty(value = "validatorul pentru elementul curent")
+    @ApiModelProperty(value = "The validator for the element.")
     @Column(name = "validator")
     private String validator;
 

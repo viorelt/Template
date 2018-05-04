@@ -9,10 +9,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * Entitatea ValueOption reprezinta un option pentru un element de tipul
- * EUiType.SELECTION
+ * This is an option for the element of type EUiType.SELECTION
  */
-@ApiModel(description = "Entitatea ValueOption reprezinta un option pentru un element de tipul EUiType.SELECTION")
+@ApiModel(description = "This is an option for the element of type EUiType.SELECTION")
 @Entity
 @Table(name = "value_option")
 public class ValueOption implements Serializable {
@@ -25,19 +24,16 @@ public class ValueOption implements Serializable {
     private Long id;
 
     /**
-     * label reprezinta ceea ce vizualizeaza utilizatorul
-     * din cadrul unui select-option
+     * The option's display label.
      */
-    @ApiModelProperty(value = "label reprezinta ceea ce vizualizeaza utilizatorul din cadrul unui select-option")
+    @ApiModelProperty(value = "The option's display label.")
     @Column(name = "jhi_label")
     private String label;
 
     /**
-     * value reprezinta ceea ce a selectat utilizatorul
-     * din cadrul unui select-option si va fi trimis catre
-     * backend
+     * The option's backend corresponding value.
      */
-    @ApiModelProperty(value = "value reprezinta ceea ce a selectat utilizatorul din cadrul unui select-option si va fi trimis catre backend")
+    @ApiModelProperty(value = "The option's backend corresponding value.")
     @Column(name = "jhi_value")
     private String value;
 

@@ -11,17 +11,17 @@
     "fields": [
         {
             "fieldName": "label",
-            "javadoc": "label reprezinta ceea ce vizualizeaza utilizatorul\ndin cadrul unui select-option",
+            "javadoc": "The option's display label.",
             "fieldType": "String"
         },
         {
             "fieldName": "value",
-            "javadoc": "value reprezinta ceea ce a selectat utilizatorul\ndin cadrul unui select-option si va fi trimis catre\nbackend",
+            "javadoc": "The option's backend corresponding value.",
             "fieldType": "String"
         }
     ],
     "changelogDate": "20180504103934",
-    "javadoc": "Entitatea ValueOption reprezinta un option pentru un element de tipul\nEUiType.SELECTION",
+    "javadoc": "This is an option for the element of type EUiType.SELECTION",
     "entityTableName": "value_option",
     "dto": "mapstruct",
     "pagination": "no",

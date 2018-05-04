@@ -45,14 +45,17 @@
     "fields": [
         {
             "fieldName": "version",
+            "javadoc": "The template version",
             "fieldType": "Long"
         },
         {
             "fieldName": "createdBy",
+            "javadoc": "Who created the version",
             "fieldType": "String"
         },
         {
             "fieldName": "createdDate",
+            "javadoc": "When the version was created",
             "fieldType": "String"
         }
     ],
