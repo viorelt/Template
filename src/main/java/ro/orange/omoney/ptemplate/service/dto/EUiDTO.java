@@ -20,12 +20,6 @@ public class EUiDTO implements Serializable {
 
     private String icon;
 
-    private String labelKey;
-
-    private String descriptionKey;
-
-    private String hintKey;
-
     private Boolean readOnly;
 
     private Boolean required;
@@ -35,6 +29,12 @@ public class EUiDTO implements Serializable {
     private String format;
 
     private String validator;
+
+    private Long labelKeyId;
+
+    private Long descriptionKeyId;
+
+    private Long hintKeyId;
 
     public Long getId() {
         return id;
@@ -66,30 +66,6 @@ public class EUiDTO implements Serializable {
 
     public void setIcon(String icon) {
         this.icon = icon;
-    }
-
-    public String getLabelKey() {
-        return labelKey;
-    }
-
-    public void setLabelKey(String labelKey) {
-        this.labelKey = labelKey;
-    }
-
-    public String getDescriptionKey() {
-        return descriptionKey;
-    }
-
-    public void setDescriptionKey(String descriptionKey) {
-        this.descriptionKey = descriptionKey;
-    }
-
-    public String getHintKey() {
-        return hintKey;
-    }
-
-    public void setHintKey(String hintKey) {
-        this.hintKey = hintKey;
     }
 
     public Boolean isReadOnly() {
@@ -132,6 +108,30 @@ public class EUiDTO implements Serializable {
         this.validator = validator;
     }
 
+    public Long getLabelKeyId() {
+        return labelKeyId;
+    }
+
+    public void setLabelKeyId(Long i18NId) {
+        this.labelKeyId = i18NId;
+    }
+
+    public Long getDescriptionKeyId() {
+        return descriptionKeyId;
+    }
+
+    public void setDescriptionKeyId(Long i18NId) {
+        this.descriptionKeyId = i18NId;
+    }
+
+    public Long getHintKeyId() {
+        return hintKeyId;
+    }
+
+    public void setHintKeyId(Long i18NId) {
+        this.hintKeyId = i18NId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -160,9 +160,6 @@ public class EUiDTO implements Serializable {
             ", type='" + getType() + "'" +
             ", index=" + getIndex() +
             ", icon='" + getIcon() + "'" +
-            ", labelKey='" + getLabelKey() + "'" +
-            ", descriptionKey='" + getDescriptionKey() + "'" +
-            ", hintKey='" + getHintKey() + "'" +
             ", readOnly='" + isReadOnly() + "'" +
             ", required='" + isRequired() + "'" +
             ", visible='" + isVisible() + "'" +

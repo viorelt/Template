@@ -8,11 +8,23 @@
     -->
     <changeSet id="20180504103924-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="last_version_id"
+        <addForeignKeyConstraint baseColumnNames="ui_id"
                                  baseTableName="template"
-                                 constraintName="fk_template_last_version_id"
+                                 constraintName="fk_template_ui_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="t_version"/>
+                                 referencedTableName="t_ui"/>
+
+        <addForeignKeyConstraint baseColumnNames="backend_id"
+                                 baseTableName="template"
+                                 constraintName="fk_template_backend_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="t_backend"/>
+
+        <addForeignKeyConstraint baseColumnNames="parent_id"
+                                 baseTableName="template"
+                                 constraintName="fk_template_parent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="template"/>
 
     </changeSet>
 </databaseChangeLog>

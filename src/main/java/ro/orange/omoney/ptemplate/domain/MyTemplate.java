@@ -58,7 +58,7 @@ public class MyTemplate implements Serializable {
     private Set<EValue> properties = new HashSet<>();
 
     @ManyToOne
-    private TVersion staticTemplate;
+    private Template staticTemplate;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -146,17 +146,17 @@ public class MyTemplate implements Serializable {
         this.properties = eValues;
     }
 
-    public TVersion getStaticTemplate() {
+    public Template getStaticTemplate() {
         return staticTemplate;
     }
 
-    public MyTemplate staticTemplate(TVersion tVersion) {
-        this.staticTemplate = tVersion;
+    public MyTemplate staticTemplate(Template template) {
+        this.staticTemplate = template;
         return this;
     }
 
-    public void setStaticTemplate(TVersion tVersion) {
-        this.staticTemplate = tVersion;
+    public void setStaticTemplate(Template template) {
+        this.staticTemplate = template;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

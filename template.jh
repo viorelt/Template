@@ -42,23 +42,7 @@ entity MyTemplate{
     createdDate Instant
 }
 
-entity TVersion {
-	
-    id Long,
-    /**
-     * The template version
-     */
-    version Long,
-     /**
-     * Who created the version
-     */
-    createdBy String,
-    /**
-     * When the version was created
-     */
-    createdDate String
 
-}
 
 /**
  * The TemplateBackend class is the extension of an attribute template
@@ -144,18 +128,7 @@ entity EUi{
      * The icon name assigned to the element.
      */
     icon String,
-    /**
-     * The element's label key required for internationalization.
-     */
-    labelKey String,
-      /**
-     * The element's description key required for internationalization.
-     */
-    descriptionKey String,
-     /**
-     * The element's hint key required for internationalization.
-     */
-    hintKey String,
+   
    /**
      * True if the element is read-only.
      */
@@ -227,28 +200,44 @@ entity ValueOption{
     value String
 }
 
+entity I18N{
+	code String,
+    description String
+}
+
+entity Language{
+	lang String,
+    value String
+}
+
 
 relationship OneToOne{
 	Element{ui} to EUi
     Element{backend} to EBackend
     Element{init} to EValue
-    TVersion{ui} to TUi
-    TVersion{backend} to TBackend
+    Template{ui} to TUi
+    Template{backend} to TBackend
     TUi{post} to SubmitAction
-    Template{lastVersion} to TVersion
+    
 }
 relationship ManyToOne{
-	TVersion{parent} to TVersion
-   	MyTemplate{staticTemplate} to TVersion
-    TVersion{template} to Template
+	Template{parent} to Template
+   	MyTemplate{staticTemplate} to Template
+   
     EValue{element} to Element
+   
+    EUi{labelKey} to I18N   
+   
+    EUi{descriptionKey} to I18N
+     
+    EUi{hintKey} to I18N
 }
 
 relationship OneToMany {
-	TVersion{elements} to Element
-    Template{versions} to TVersion
+	Template{elements} to Element
     EUi{options} to ValueOption
     MyTemplate{properties} to EValue
+    I18N{languages} to Language
 }
 
 

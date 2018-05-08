@@ -2,8 +2,8 @@
     "fluentMethods": true,
     "relationships": [
         {
-            "relationshipName": "tVersion",
-            "otherEntityName": "tVersion",
+            "relationshipName": "template",
+            "otherEntityName": "template",
             "relationshipType": "many-to-one",
             "otherEntityField": "id"
         },

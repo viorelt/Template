@@ -19,7 +19,7 @@ public class ElementDTO implements Serializable {
 
     private Boolean deleted;
 
-    private Long tVersionId;
+    private Long templateId;
 
     private Long uiId;
 
@@ -59,12 +59,12 @@ public class ElementDTO implements Serializable {
         this.deleted = deleted;
     }
 
-    public Long getTVersionId() {
-        return tVersionId;
+    public Long getTemplateId() {
+        return templateId;
     }
 
-    public void setTVersionId(Long tVersionId) {
-        this.tVersionId = tVersionId;
+    public void setTemplateId(Long templateId) {
+        this.templateId = templateId;
     }
 
     public Long getUiId() {
