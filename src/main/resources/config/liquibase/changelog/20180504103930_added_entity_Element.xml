@@ -33,7 +33,7 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="t_version_id" type="bigint">
+            <column name="template_id" type="bigint">
                 <constraints nullable="true" />
             </column>
             <column name="ui_id" type="bigint">

@@ -16,6 +16,8 @@
     <include file="config/liquibase/changelog/20180504103932_added_entity_EBackend.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180504103933_added_entity_EValue.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180504103934_added_entity_ValueOption.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180508113810_added_entity_I18N.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180508113811_added_entity_Language.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20180504103925_added_entity_constraints_MyTemplate.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180504103926_added_entity_constraints_TVersion.xml" relativeToChangelogFile="false"/>
@@ -24,5 +26,7 @@
     <include file="config/liquibase/changelog/20180504103933_added_entity_constraints_EValue.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180504103934_added_entity_constraints_ValueOption.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180504103924_added_entity_constraints_Template.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180504103931_added_entity_constraints_EUi.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180508113811_added_entity_constraints_Language.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

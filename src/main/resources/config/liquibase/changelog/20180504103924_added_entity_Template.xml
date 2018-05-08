@@ -36,9 +36,15 @@
             <column name="deleted" type="bit">
                 <constraints nullable="true" />
             </column>
-            <column name="last_version_id" type="bigint">
+            <column name="ui_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>            <column name="backend_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>
+            <column name="parent_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
         <dropDefaultValue tableName="template" columnName="created_date" columnDataType="datetime"/>

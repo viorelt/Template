@@ -10,7 +10,7 @@
         {
             "relationshipType": "many-to-one",
             "relationshipName": "staticTemplate",
-            "otherEntityName": "tVersion",
+            "otherEntityName": "template",
             "otherEntityField": "id"
         }
     ],

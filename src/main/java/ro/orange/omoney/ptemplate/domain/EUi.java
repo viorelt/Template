@@ -51,27 +51,6 @@ public class EUi implements Serializable {
     private String icon;
 
     /**
-     * The element's label key required for internationalization.
-     */
-    @ApiModelProperty(value = "The element's label key required for internationalization.")
-    @Column(name = "label_key")
-    private String labelKey;
-
-    /**
-     * The element's description key required for internationalization.
-     */
-    @ApiModelProperty(value = "The element's description key required for internationalization.")
-    @Column(name = "description_key")
-    private String descriptionKey;
-
-    /**
-     * The element's hint key required for internationalization.
-     */
-    @ApiModelProperty(value = "The element's hint key required for internationalization.")
-    @Column(name = "hint_key")
-    private String hintKey;
-
-    /**
      * True if the element is read-only.
      */
     @ApiModelProperty(value = "True if the element is read-only.")
@@ -109,6 +88,15 @@ public class EUi implements Serializable {
     @OneToMany(mappedBy = "eUi")
     @JsonIgnore
     private Set<ValueOption> options = new HashSet<>();
+
+    @ManyToOne
+    private I18N labelKey;
+
+    @ManyToOne
+    private I18N descriptionKey;
+
+    @ManyToOne
+    private I18N hintKey;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -156,45 +144,6 @@ public class EUi implements Serializable {
 
     public void setIcon(String icon) {
         this.icon = icon;
-    }
-
-    public String getLabelKey() {
-        return labelKey;
-    }
-
-    public EUi labelKey(String labelKey) {
-        this.labelKey = labelKey;
-        return this;
-    }
-
-    public void setLabelKey(String labelKey) {
-        this.labelKey = labelKey;
-    }
-
-    public String getDescriptionKey() {
-        return descriptionKey;
-    }
-
-    public EUi descriptionKey(String descriptionKey) {
-        this.descriptionKey = descriptionKey;
-        return this;
-    }
-
-    public void setDescriptionKey(String descriptionKey) {
-        this.descriptionKey = descriptionKey;
-    }
-
-    public String getHintKey() {
-        return hintKey;
-    }
-
-    public EUi hintKey(String hintKey) {
-        this.hintKey = hintKey;
-        return this;
-    }
-
-    public void setHintKey(String hintKey) {
-        this.hintKey = hintKey;
     }
 
     public Boolean isReadOnly() {
@@ -286,6 +235,45 @@ public class EUi implements Serializable {
     public void setOptions(Set<ValueOption> valueOptions) {
         this.options = valueOptions;
     }
+
+    public I18N getLabelKey() {
+        return labelKey;
+    }
+
+    public EUi labelKey(I18N i18N) {
+        this.labelKey = i18N;
+        return this;
+    }
+
+    public void setLabelKey(I18N i18N) {
+        this.labelKey = i18N;
+    }
+
+    public I18N getDescriptionKey() {
+        return descriptionKey;
+    }
+
+    public EUi descriptionKey(I18N i18N) {
+        this.descriptionKey = i18N;
+        return this;
+    }
+
+    public void setDescriptionKey(I18N i18N) {
+        this.descriptionKey = i18N;
+    }
+
+    public I18N getHintKey() {
+        return hintKey;
+    }
+
+    public EUi hintKey(I18N i18N) {
+        this.hintKey = i18N;
+        return this;
+    }
+
+    public void setHintKey(I18N i18N) {
+        this.hintKey = i18N;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -315,9 +303,6 @@ public class EUi implements Serializable {
             ", type='" + getType() + "'" +
             ", index=" + getIndex() +
             ", icon='" + getIcon() + "'" +
-            ", labelKey='" + getLabelKey() + "'" +
-            ", descriptionKey='" + getDescriptionKey() + "'" +
-            ", hintKey='" + getHintKey() + "'" +
             ", readOnly='" + isReadOnly() + "'" +
             ", required='" + isRequired() + "'" +
             ", visible='" + isVisible() + "'" +

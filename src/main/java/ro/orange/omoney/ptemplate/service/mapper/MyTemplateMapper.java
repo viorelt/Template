@@ -8,7 +8,7 @@ import org.mapstruct.*;
 /**
  * Mapper for the entity MyTemplate and its DTO MyTemplateDTO.
  */
-@Mapper(componentModel = "spring", uses = {TVersionMapper.class})
+@Mapper(componentModel = "spring", uses = {TemplateMapper.class})
 public interface MyTemplateMapper extends EntityMapper<MyTemplateDTO, MyTemplate> {
 
     @Mapping(source = "staticTemplate.id", target = "staticTemplateId")

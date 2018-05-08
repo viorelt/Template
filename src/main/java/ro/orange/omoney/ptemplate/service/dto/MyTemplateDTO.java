@@ -68,8 +68,8 @@ public class MyTemplateDTO implements Serializable {
         return staticTemplateId;
     }
 
-    public void setStaticTemplateId(Long tVersionId) {
-        this.staticTemplateId = tVersionId;
+    public void setStaticTemplateId(Long templateId) {
+        this.staticTemplateId = templateId;
     }
 
     @Override

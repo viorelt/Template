@@ -22,7 +22,11 @@ public class TemplateDTO implements Serializable {
 
     private Boolean deleted;
 
-    private Long lastVersionId;
+    private Long uiId;
+
+    private Long backendId;
+
+    private Long parentId;
 
     public Long getId() {
         return id;
@@ -64,12 +68,28 @@ public class TemplateDTO implements Serializable {
         this.deleted = deleted;
     }
 
-    public Long getLastVersionId() {
-        return lastVersionId;
+    public Long getUiId() {
+        return uiId;
     }
 
-    public void setLastVersionId(Long tVersionId) {
-        this.lastVersionId = tVersionId;
+    public void setUiId(Long tUiId) {
+        this.uiId = tUiId;
+    }
+
+    public Long getBackendId() {
+        return backendId;
+    }
+
+    public void setBackendId(Long tBackendId) {
+        this.backendId = tBackendId;
+    }
+
+    public Long getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(Long templateId) {
+        this.parentId = templateId;
     }
 
     @Override

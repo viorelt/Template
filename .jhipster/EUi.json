@@ -6,6 +6,24 @@
             "relationshipName": "options",
             "otherEntityName": "valueOption",
             "otherEntityRelationshipName": "eUi"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "labelKey",
+            "otherEntityName": "i18N",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "descriptionKey",
+            "otherEntityName": "i18N",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "hintKey",
+            "otherEntityName": "i18N",
+            "otherEntityField": "id"
         }
     ],
     "fields": [
@@ -23,21 +41,6 @@
         {
             "fieldName": "icon",
             "javadoc": "The icon name assigned to the element.",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "labelKey",
-            "javadoc": "The element's label key required for internationalization.",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "descriptionKey",
-            "javadoc": "The element's description key required for internationalization.",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "hintKey",
-            "javadoc": "The element's hint key required for internationalization.",
             "fieldType": "String"
         },
         {

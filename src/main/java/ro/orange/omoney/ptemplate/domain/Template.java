@@ -58,11 +58,18 @@ public class Template implements Serializable {
 
     @OneToOne
     @JoinColumn(unique = true)
-    private TVersion lastVersion;
+    private TUi ui;
+
+    @OneToOne
+    @JoinColumn(unique = true)
+    private TBackend backend;
 
     @OneToMany(mappedBy = "template")
     @JsonIgnore
-    private Set<TVersion> versions = new HashSet<>();
+    private Set<Element> elements = new HashSet<>();
+
+    @ManyToOne
+    private Template parent;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -125,42 +132,68 @@ public class Template implements Serializable {
         this.deleted = deleted;
     }
 
-    public TVersion getLastVersion() {
-        return lastVersion;
+    public TUi getUi() {
+        return ui;
     }
 
-    public Template lastVersion(TVersion tVersion) {
-        this.lastVersion = tVersion;
+    public Template ui(TUi tUi) {
+        this.ui = tUi;
         return this;
     }
 
-    public void setLastVersion(TVersion tVersion) {
-        this.lastVersion = tVersion;
+    public void setUi(TUi tUi) {
+        this.ui = tUi;
     }
 
-    public Set<TVersion> getVersions() {
-        return versions;
+    public TBackend getBackend() {
+        return backend;
     }
 
-    public Template versions(Set<TVersion> tVersions) {
-        this.versions = tVersions;
+    public Template backend(TBackend tBackend) {
+        this.backend = tBackend;
         return this;
     }
 
-    public Template addVersions(TVersion tVersion) {
-        this.versions.add(tVersion);
-        tVersion.setTemplate(this);
+    public void setBackend(TBackend tBackend) {
+        this.backend = tBackend;
+    }
+
+    public Set<Element> getElements() {
+        return elements;
+    }
+
+    public Template elements(Set<Element> elements) {
+        this.elements = elements;
         return this;
     }
 
-    public Template removeVersions(TVersion tVersion) {
-        this.versions.remove(tVersion);
-        tVersion.setTemplate(null);
+    public Template addElements(Element element) {
+        this.elements.add(element);
+        element.setTemplate(this);
         return this;
     }
 
-    public void setVersions(Set<TVersion> tVersions) {
-        this.versions = tVersions;
+    public Template removeElements(Element element) {
+        this.elements.remove(element);
+        element.setTemplate(null);
+        return this;
+    }
+
+    public void setElements(Set<Element> elements) {
+        this.elements = elements;
+    }
+
+    public Template getParent() {
+        return parent;
+    }
+
+    public Template parent(Template template) {
+        this.parent = template;
+        return this;
+    }
+
+    public void setParent(Template template) {
+        this.parent = template;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

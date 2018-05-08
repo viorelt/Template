@@ -46,7 +46,7 @@ public class Element implements Serializable {
     private Boolean deleted;
 
     @ManyToOne
-    private TVersion tVersion;
+    private Template template;
 
     @OneToOne
     @JoinColumn(unique = true)
@@ -108,17 +108,17 @@ public class Element implements Serializable {
         this.deleted = deleted;
     }
 
-    public TVersion getTVersion() {
-        return tVersion;
+    public Template getTemplate() {
+        return template;
     }
 
-    public Element tVersion(TVersion tVersion) {
-        this.tVersion = tVersion;
+    public Element template(Template template) {
+        this.template = template;
         return this;
     }
 
-    public void setTVersion(TVersion tVersion) {
-        this.tVersion = tVersion;
+    public void setTemplate(Template template) {
+        this.template = template;
     }
 
     public EUi getUi() {
